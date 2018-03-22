@@ -1,0 +1,421 @@
+body{
+	height: 1000px;
+	margin: 0px;
+	margin-bottom: 50px;
+	font-family: sans-serif;
+	font-size: 18px;
+}
+
+.top-panel{
+	background: linear-gradient(to top, #7c99bf, #fdfdfe);
+	//max-width: 1200px;
+}
+
+.panel-btn{
+	display: inline-block;
+	width: 120px;
+	text-align: center;
+	cursor: context-menu;
+	padding: 5px;
+}
+
+.panel-btn:hover{
+	box-shadow: 0px 0px 5px 2px grey;
+}
+
+.panel-btn:active{
+	box-shadow: 0px 0px 15px 2px grey;
+}
+
+.folder{
+	color: blue;
+}
+
+.file{
+	color: DodgerBlue;
+}
+
+#files-and-folders{
+	//max-width: 1200px;
+	background: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	cursor: pointer;
+	border-bottom: 2px solid grey;
+}
+
+.column{
+	overflow: hidden;
+	min-width: 150px;
+}
+
+.name{
+	width: 100%;
+	white-space: nowrap;
+}
+
+.name img{
+	margin-left: 1px;
+	margin-right: 4px;
+}
+
+.extension{
+	width: 100px;
+	min-width: 100px;
+}
+
+.size{
+	width: 100px;
+}
+
+.access{
+	width: 100px;
+}
+
+.changed{
+	width: 210px;
+	//min-width: 210px; 
+}
+
+.create{
+	width: 210px;
+	//min-width: 210px;
+}
+
+.owner{
+	width: 100px;
+	min-width: 100px; 
+}
+
+.first-row{
+	border-right: 1px solid grey;
+	background: #cfcfcf;
+	height: 25px;
+	padding: 5px;
+	line-height: 25px;
+}
+
+.item{
+	overflow: hidden;
+	padding: 5px;
+	border-bottom: 1px solid #808080a6;
+	border-right: 1px solid #80808038;
+	max-height: 18px;
+}
+
+.item-hover{
+	background: #d7e6e6;
+}
+
+#upload-files{
+	font-size: 15px;
+	display: none;
+	flex-direction: column;
+	justify-content:space-between;
+	width: 550px;
+	min-width: 150px;
+	height: 300px;
+	min-height:190px;
+	background: #236d7e;
+	position: absolute;
+	box-shadow: 0px 0px 5px 2px grey;
+	position: fixed;
+	top: 100px;
+	left: 150px;
+}
+
+#show-file{
+	font-size: 15px;
+	display: none;
+	flex-direction: column;
+	justify-content:space-between;
+	width: 600px;
+	min-width: 600px;
+	height: 300px;
+	min-height:150px;
+	background: #236d7e;
+	position: absolute;
+	box-shadow: 0px 0px 5px 2px grey;
+	position: fixed;
+	top: 100px;
+	left: 150px;
+}
+
+#show-file-title, #upload-files-title{
+	width: 100%;
+	min-height: 50px;
+	background: #495060;
+	font-size: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	cursor: move;
+}
+
+#file-name{
+	max-width: 100%;
+	margin-left: 5px;
+	margin-right: 5px;
+	color: white;
+	overflow: hidden;
+    word-wrap: break-word;
+}
+
+.close-image{
+	height: 16px;
+	width: 16px;
+	cursor: pointer;	
+	margin-right: 5px;
+}
+
+.show-file-toolbar{
+	min-height: 30px;
+	background: #d1dbe2;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.show-file-toolbar-btn{
+	margin-left: 10px;
+	background: #abc3ca;
+	border: 1px solid grey;
+	border-radius:0px;
+	height: 100%;
+}
+
+.show-file-toolbar-btn:hover{
+	background: #565875;
+}
+
+
+.show-file-center{
+	height:100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+
+.upload-file-center{
+	height:100%;
+	background: white;
+	overflow: auto;
+}
+
+.upload-files-toolbar{
+	background: #d1dbe2;
+}
+
+.upload-files-btn{
+	display: inline-block;
+	margin: 5px;
+	cursor: pointer;
+	background: #8199a0;
+    border: 1px solid grey;
+}
+
+.upload-files-btn:hover{
+	background: #565875;
+}
+
+#container-row-numbers{
+	min-width:45px;
+	background:#ebebeb;
+	overflow: hidden;
+	line-height: 1.4;
+}
+
+.number{
+	font-size: inherit;
+	line-height: inherit;
+	text-align: right;
+	padding-right: 30%;
+	font-family: monospace;
+}
+
+#text-area{
+	background: white;
+	width:100%;
+	border: none;
+	overflow: auto;
+	resize: none;
+	font-size: 16px;
+	line-height: 1.4;
+	padding-top:0px;
+}
+
+.file-info{
+	background:#d1dbe2;
+	min-height:36px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.file-info-item{
+	margin-left: 10px;
+	padding-right: 10px;
+	border-right: 1px solid grey;
+}
+
+.choosed-file{
+	height: 30px;
+}
+
+.upload-file-footer{
+	background:#d1dbe2;
+	min-height:30px;
+}
+
+.context-menu{
+	width: 190px;
+	background: grey;
+	position:absolute;
+	box-shadow:0px 0px 5px 1px grey;
+	display:none;
+}
+
+.context-menu img{
+	margin: 10px;
+}
+
+.menu-item{
+	display:flex;
+	background: #f1f0f0;	
+}
+
+.menu-item:hover{
+	background:#e1e3e6;
+}
+
+.menu-text{
+	display:inline;
+	margin:auto;
+	margin-left:5px;
+	cursor:default;
+}
+
+.browse-file{
+	margin: 5px;
+	font-size: 25px;
+	background: lightgrey;
+	padding: 2px;
+}
+
+.helperstyle{
+	border:1px solid;
+	background-color:pink;
+	opacity:0.6;
+	filter:alpha(opacity=60);
+}
+
+#analyze-size, #search-file{
+	display: none;
+	background: #236d7e;
+	position: fixed;
+	left: 250px;
+	box-shadow: 0px 0px 5px 2px grey;
+	min-width: 500px;
+	min-height: 400px;
+	flex-direction: column;
+    justify-content: space-between;
+	z-index: 10;
+}
+
+#show-file-settings{
+	display: none;
+	background: #236d7e;
+	position: fixed;
+	left: 250px;
+	box-shadow: 0px 0px 5px 2px grey;
+	min-width: 500px;
+	z-index: 10;
+}
+
+.settings{
+	background: #d1dbe2;
+	height: 300px;
+}
+
+.analyze-size-title, .search-file-title, .file-settings-title{
+	width: 100%;
+	height:35px;
+	font-size: 20px;
+	background: #495060;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chart{
+	background: green;
+	width: 100%;
+	height: 300px;
+}
+
+#search-info{
+	height: 200px;
+	background: #dce5ec;
+}
+
+#table{
+	background: white;
+	width: 100%;
+	height: 250px;
+}
+
+#search-table{
+	background: white;
+	width: 100%;
+	height: 150px;
+}
+
+#search-file footer{
+	background: #d1dbe2;
+}
+
+#search-file input{
+	margin-bottom: 10px;
+	margin-left: 10px;
+	display: block;
+}
+
+#search-file label{
+	margin-left: 10px;
+}
+
+.search-btn{
+	background: #8199a0;
+	border: 1px solid grey;
+	margin: 10px;
+}
+
+.search-btn:hover{
+    background: #565875;
+}
+
+.table-row-style{
+	height: 20px;
+	//background-color: blue;
+}
+
+.settings button{
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	background:#abc3ca;
+}
+
+.settings label{
+	margin-left:10px;
+}
+
+
+
