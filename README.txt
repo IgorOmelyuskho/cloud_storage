@@ -2,4 +2,4 @@
 
 #Images In ReadMes
 
-![Image alt](https://github.com/IgorOmelyuskho/game_2048/images_32/home.png)
+![Image alt](https://github.com/IgorOmelyuskho/cloud_storage/images_32/home.png)
