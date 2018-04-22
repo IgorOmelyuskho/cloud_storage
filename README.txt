@@ -2,4 +2,4 @@
 
 #Images In ReadMes
 
-![Image alt](https://github.com/IgorOmelyuskho/cloud_storage/images_32/home.png)
+![](images_32/home.png)
